@@ -5,12 +5,12 @@ import {
     Route, 
     Switch,
 } from 'react-router-dom';
-import Header from './components/Header.js';
-import PrivateRoute from './components/PrivateRoute.js';
+import Header from './Components/Header.js';
+import PrivateRoute from './Components/PrivateRoute.js';
 import Home from './Home/Home.js';
-import SignUpPage from './AuthPages/SignUpPage.js';
-import LoginPage from './AuthPages/LoginPage.js';
-import PeopleSearchPage from './PeopleSearchPage/PeopleSearchPage.js';
+import SignUpPage from './Auth/SignUpPage.js';
+import LoginPage from './Auth/LoginPage.js';
+// import PeopleSearchPage from './PeopleSearchPage/PeopleSearchPage.js';
 import { getUserFromLocalStorage, putUserInLocalStorage } from './local-storage-utils.js';
 import FavoritesPage from './FavoritesPage/FavoritesPage.js';
 
@@ -43,13 +43,13 @@ export default class App extends Component {
                             exact
                             render={(routerProps) => <Home {...routerProps} />} 
                         />
-                        <Route 
+                        {/* <Route 
                             path="/search" 
                             exact
                             render={(routerProps) => <PeopleSearchPage 
                               {...routerProps} 
                               user={this.state.user} />} 
-                        />
+                        /> */}
                         <PrivateRoute 
                             path="/favorites" 
                             exact
