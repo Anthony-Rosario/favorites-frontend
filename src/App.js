@@ -10,7 +10,7 @@ import PrivateRoute from './Components/PrivateRoute.js';
 import Home from './Home/Home.js';
 import SignUpPage from './Auth/SignUpPage.js';
 import LoginPage from './Auth/LoginPage.js';
-// import PeopleSearchPage from './PeopleSearchPage/PeopleSearchPage.js';
+import PeopleSearchPage from './PeopleSearchPage/PeopleSearchPage.js';
 import { getUserFromLocalStorage, putUserInLocalStorage } from './local-storage-utils.js';
 import FavoritesPage from './FavoritesPage/FavoritesPage.js';
 
@@ -43,13 +43,13 @@ export default class App extends Component {
                             exact
                             render={(routerProps) => <Home {...routerProps} />} 
                         />
-                        {/* <Route 
+                        <Route 
                             path="/search" 
                             exact
                             render={(routerProps) => <PeopleSearchPage 
                               {...routerProps} 
                               user={this.state.user} />} 
-                        /> */}
+                        />
                         <PrivateRoute 
                             path="/favorites" 
                             exact

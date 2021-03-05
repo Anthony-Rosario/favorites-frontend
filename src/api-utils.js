@@ -18,14 +18,14 @@ export async function loginUser(email, password) {
 
 
 export async function searchPeople(query) {
-    const response = await request.post(`${URL}/people?search=${query}`)
+    const response = await request.get(`${URL}/people?search=${query}`)
 
     return response.body.results;
 }
 
 
-export async function addFavorite(people, token) {
-    const response = await request.post(`${URL}/api/favorites`).set('Authorization', token);
+export async function addFavorite(person, token) {
+    const response = await request.post(`${URL}/api/favorites`).set('Authorization', token).send(person);
 
     return response.body;
 }
@@ -33,6 +33,13 @@ export async function addFavorite(people, token) {
 
 export async function getFavorites(token) {
     const response = await request.get(`${URL}/api/favorites`).set('Authorization', token);
+
+    return response.body;
+}
+
+
+export async function deleteFavorite(person, token) {
+    const response = await (await request.delete(`${URL}/api/favorite/${person}`)).set('Authorization', token).send(person);
 
     return response.body;
 }
