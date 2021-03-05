@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import { on } from 'superagent';
+import React, { Component } from 'react';
 import { searchPeople, getFavorites, addFavorite } from '../api-utils.js';
 
 
