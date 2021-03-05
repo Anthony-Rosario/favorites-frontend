@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  background-image: url('./assets/star-wars.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.favorites {
+  color: rgba(38, 40, 185, 0.993);
+}
+
+.people-container {
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(165, 42, 42, 0.561);
+}
+
+.header-link {
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  border: 1px solid black;
+  background-image: url('./assets/Best-Moving-Stars-GIFs-Gfycat.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+a {
+  color: rgba(0, 255, 255, 0.835);
+}
+
+.header-button {
+  height: 40px;
+  border-radius: 40px 40px 0px 0px;
+}
+
+.home-background {
+  background-image: url('./assets/hello-there.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+
+.search-input {
+  
+}
+
+.people-search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.starwars-home {
+  font-family: 'starjedi_special_editionRg';
+  font-size: 100px;
+}
+
+.people {
+  border: 1px solid rgb(144, 34, 34);
+  border-radius: 10px;
+  width: 50%;
+  font-weight: 1000;
+  background-color: rgba(29, 149, 129, 0.76);
+}
+
+
+@font-face {
+  font-family: 'starjedi_special_editionRg';
+  src: url('./assets/stjedise-webfont.woff2') format('woff2'),
+       url('./assets/stjedise-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
